@@ -82,6 +82,12 @@ function field_label_plurals_cardinality_callback($form, $form_state) {
 function field_label_plurals_preprocess_field(&$variables) {
   $element = &$variables['element'];
   if (count($variables['items']) === 1) {
+
+    // If the textformatter module is enabled we do another check.
+    if (module_exists('textformatter') && count($variables['items'][0]['#items']) > 1) {
+      return;
+    }
+
     $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
     if (isset($instance['field_label_plurals_singular']) && trim($instance['field_label_plurals_singular']) != '') {
       $variables['label'] = check_plain($instance['field_label_plurals_singular']);
