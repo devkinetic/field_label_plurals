@@ -84,7 +84,7 @@ function field_label_plurals_preprocess_field(&$variables) {
   if (count($variables['items']) === 1) {
 
     // If the textformatter module is enabled we do another check.
-    if (module_exists('textformatter') && count($variables['items'][0]['#items']) > 1) {
+    if (module_exists('textformatter') && (!isset($variables['items'][0]['#items']) || count($variables['items'][0]['#items']) > 1)) {
       return;
     }
 
