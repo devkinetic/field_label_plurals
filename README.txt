@@ -14,7 +14,7 @@ Installation
 Field label plurals has no special requirements, install just like any other
 module:
 
-  http://drupal.org/documentation/install/modules-themes/modules-7
+  http://drupal.org/documentation/install/modules-themes/modules-8
 
 Example
 -------
