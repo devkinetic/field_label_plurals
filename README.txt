@@ -1,8 +1,9 @@
-Field label plurals
+Field Label Plurals
 -------------------
 
-Field label plurals allows you to select different field labels for singular
-and plural, depending on the number of field values.
+The Field Label Plurals module provides the ability to configure seperate field
+labels for singular and plural, which are then used depending on the number of
+field values.
 
 Project page:
 
@@ -11,8 +12,8 @@ Project page:
 Installation
 ------------
 
-Field label plurals has no special requirements, install just like any other
-module:
+Field Label Plurals has no special requirements, so you can install it just
+like any other module:
 
   http://drupal.org/documentation/install/modules-themes/modules-8
 
@@ -29,6 +30,10 @@ Example
 Maintainers
 -----------
 
+ * Dave Nattriss
+   https://www.drupal.org/u/natts
+   dave@natts.com
+
  * Niklas Fiekas
-   http://drupal.org/user/1089248
+   https://www.drupal.org/u/niklas-fiekas
    niklas.fiekas@googlemail.com
