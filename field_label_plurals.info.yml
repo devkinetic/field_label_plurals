@@ -1,6 +1,6 @@
-name: Field label plurals
+name: Field Label Plurals
 type: module
-description: 'Allows you to set a singular and a plural for field labels.'
+description: 'Allows both singular and plural labels for multi-value fields.'
 package: Fields
 core: 8.x
 dependencies:
