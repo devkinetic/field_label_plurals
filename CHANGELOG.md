@@ -8,5 +8,5 @@
 - Added help hook output
 - Updated module name and description
 - Drupal 9 compatibility
-- Increased plural label field maxlength, added a description, and moved to the
-  display_label section of the form
+- Increased plural label field maxlength, added a description, and moved towards
+  the top of the form

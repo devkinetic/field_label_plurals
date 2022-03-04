@@ -48,7 +48,7 @@ function field_label_plurals_preprocess_field(&$variables) {
 function field_label_plurals_form_field_config_edit_form_alter(&$form, $form_state, $form_id) {
   $entity = $form_state->getFormObject()->getEntity();
 
-  $form['display_label'] = [
+  $form['plural_label'] = [
     '#type' => 'textfield',
     '#title' => t('Label to use for multiple values'),
     '#description' => t('A seperate label for when the field has more than one value.'),
