@@ -4,3 +4,4 @@
 
 - Added CHANGELOG.md
 - Converted README.txt to README.md, and updated with new information
+- Drupal coding standard fixes/comments etc.
