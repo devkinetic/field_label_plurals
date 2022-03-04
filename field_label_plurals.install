@@ -10,9 +10,9 @@
  */
 function field_label_plurals_install() {
   if (\Drupal::moduleHandler()->moduleExists('field_ui')) {
-    drupal_set_message(t('You can now give fields a different label for singular and plural on all field edit pages.'));
+    \Drupal::messenger()->addStatus(t('You can now give fields a different label for singular and plural on all field edit pages.'));
   }
   else {
-    drupal_set_message(t('Enable the Field UI module if you want to adjust singular and plural labels of fields.'));
+    \Drupal::messenger()->addStatus(t('Enable the Field UI module if you want to adjust singular and plural labels of fields.'));
   }
 }

@@ -7,3 +7,4 @@
 - Drupal coding standard fixes/comments etc.
 - Added help hook output
 - Updated module name and description
+- Drupal 9 compatibility
