@@ -11,6 +11,12 @@
 function field_label_plurals_install() {
   if (\Drupal::moduleHandler()->moduleExists('field_ui')) {
     \Drupal::messenger()->addStatus(t('You can now give fields a different label for singular and plural on all field edit pages.'));
+
+    /** @var \Drupal\Core\Routing\RouteBuilderInterface $routeBuilder $route_builder */
+    $route_builder = \Drupal::service('router.builder');
+
+    // Rebuild the routes, see hook_install doc.
+    $route_builder->rebuild();
   }
   else {
     \Drupal::messenger()->addStatus(t('Enable the Field UI module if you want to adjust singular and plural labels of fields.'));
