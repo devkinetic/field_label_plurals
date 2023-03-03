@@ -49,17 +49,22 @@ function field_label_plurals_preprocess_field(&$variables) {
 function field_label_plurals_form_field_config_edit_form_alter(&$form, $form_state, $form_id) {
   $entity = $form_state->getFormObject()->getEntity();
 
-  $form['#entity_builders'][] = 'field_label_plurals_set_settings';
+  // If the field is not allowed more than one value, or not allowed
+  // unlimited values, then add the form field.
+  if ($entity->getFieldStorageDefinition()->getCardinality() != 1
+      && $entity->getFieldStorageDefinition()->getCardinality() != 0) {
+    $form['#entity_builders'][] = 'field_label_plurals_set_settings';
 
-  $form['label_plural'] = [
-    '#type' => 'textfield',
-    '#title' => t('Label to use for multiple values'),
-    '#description' => t('A seperate label for when the field has more than one value.'),
-    '#weight' => isset($form['label']['#weight']) ? ($form['label']['#weight'] + 1) : 0,
-    '#default_value' => $entity->getThirdPartySetting('field_label_plurals', 'label_plural'),
-    '#size' => 60,
-    '#maxlength' => 200,
-  ];
+    $form['label_plural'] = [
+      '#type' => 'textfield',
+      '#title' => t('Label to use for multiple values'),
+      '#description' => t('A seperate label for when the field has more than one value.'),
+      '#weight' => isset($form['label']['#weight']) ? ($form['label']['#weight'] + 1) : 0,
+      '#default_value' => $entity->getThirdPartySetting('field_label_plurals', 'label_plural'),
+      '#size' => 60,
+      '#maxlength' => 200,
+    ];
+  }
 }
 
 /**

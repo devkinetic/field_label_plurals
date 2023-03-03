@@ -10,3 +10,4 @@
 - Drupal 9 compatibility
 - Increased plural label field maxlength, added a description, and moved towards
   the top of the form
+- Configuration form field only added if field settings allow multiple values
