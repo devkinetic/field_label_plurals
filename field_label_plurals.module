@@ -19,7 +19,7 @@ function field_label_plurals_help($route_name, RouteMatchInterface $route_match)
       $output .= '<h3>' . t('Uses') . '</h3>';
       $output .= '<dl>';
       $output .= '<dt>' . t('Displaying field labels') . '</dt>';
-      $output .= '<dd>' . t('Field labels will be displayed using the <em>Field Label Plurals</em> setting on the field\'s manage settings page for any content type.') . '</dd>';
+      $output .= '<dd>' . t("Field labels will be displayed using the <em>Field Label Plurals</em> setting on the field's manage settings page for any content type.") . '</dd>';
       $output .= '</dl>';
 
       return $output;
