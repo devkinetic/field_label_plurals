@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -48,6 +49,8 @@ function field_label_plurals_preprocess_field(&$variables) {
 function field_label_plurals_form_field_config_edit_form_alter(&$form, $form_state, $form_id) {
   $entity = $form_state->getFormObject()->getEntity();
 
+  $form['#entity_builders'][] = 'field_label_plurals_set_settings';
+
   $form['plural_label'] = [
     '#type' => 'textfield',
     '#title' => t('Label to use for multiple values'),
@@ -57,4 +60,16 @@ function field_label_plurals_form_field_config_edit_form_alter(&$form, $form_sta
     '#size' => 60,
     '#maxlength' => 200,
   ];
+}
+
+/**
+ * Entity builder to set the field settings.
+ */
+function field_label_plurals_set_settings($entity_type, $entity, &$form, FormStateInterface $form_state) {
+  if ($form_state->getValue('label_plural')) {
+    $entity->setThirdPartySetting('field_label_plurals', 'label_plural', $form_state->getValue('label_plural'));
+  }
+  else {
+    $entity->unsetThirdPartySetting('field_label_plurals', 'label_plural');
+  }
 }
