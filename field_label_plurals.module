@@ -51,7 +51,7 @@ function field_label_plurals_form_field_config_edit_form_alter(&$form, $form_sta
 
   $form['#entity_builders'][] = 'field_label_plurals_set_settings';
 
-  $form['plural_label'] = [
+  $form['label_plural'] = [
     '#type' => 'textfield',
     '#title' => t('Label to use for multiple values'),
     '#description' => t('A seperate label for when the field has more than one value.'),
