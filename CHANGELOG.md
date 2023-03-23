@@ -1,5 +1,10 @@
 # Field Label Plurals module change log
 
+## Field Label Plurals 8.x-1.0-rc3
+
+- Updated configuration form field multiple value check to work with arrays of
+  items
+
 ## Field Label Plurals 8.x-1.0-rc2
 
 - Configuration form field only added if field settings allow multiple values
