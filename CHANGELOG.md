@@ -4,6 +4,7 @@
 
 - Updated configuration form field multiple value check to work with arrays of
   items
+- Fixed syntax bug in composer.json
 
 ## Field Label Plurals 8.x-1.0-rc2
 
