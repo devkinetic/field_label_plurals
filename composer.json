@@ -24,8 +24,7 @@
         "source": "https://git.drupalcode.org/project/field_label_plurals"
     },
     "require": {
-        "drupal/core": "^8 || ^9",
-        "drupal/field": "^8.0"
+        "drupal/core": "^8 || ^9"
     },
     "repositories": {
         "drupal": {
